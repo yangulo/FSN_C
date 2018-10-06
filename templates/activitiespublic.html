@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css')}}" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+</head>
+
+<body class="body_activities">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #505050;">
+        <a class="navbar-brand" style="color:white; font-size:30px; " href="#"><b>My Pocket List ~Activities</b></a>
+    </nav>
+    <div>
+        <br>
+        <br>
+        <br>
+    </div>
+    <h3 class="text_activities">Things to do in {{country.name}}</h3>
+    {% for activity in activities%}
+    <div class="text_activity_name">
+        <dl>
+            <dt>{{activity.name}}</dt>
+            <dd>{{activity.description}}</dd>
+        </dl>
+        <br>
+    </div>
+    {% endfor %}
+    <br>
+    <br>
+    <div>
+        <button onclick="location.href='/country/{{country.country_id}}/placeid/{{country.id}}/new'" style="position: absolute; right: 10;"
+            type="button" class="btn btn-light">New</button>
+        <br>
+        <br>
+        <br>
+        <button onclick="location.href='/country/{{country.country_id}}/'" style="position: absolute; right: 10;" type="button"
+            class="btn btn-light">Back</button>
+        <br>
+        <br>
+        <br>
+        <button onclick="location.href='/countries'" style="position: absolute; right: 10;" type="button" class="btn btn-light">Home</button>
+    </div>
+</body>
+
+</html>

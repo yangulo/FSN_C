@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" 
+            content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" 
+            href="{{ url_for('static', filename='css/styles.css')}}" 
+            type="text/css">
+        <link rel="stylesheet" 
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+            integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
+            crossorigin="anonymous">
+        </head>
+    <body class="body_delete_activity">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" 
+            style="background-color: #505050;">
+        <a class="navbar-brand" 
+            style="color:white; font-size:30px; " 
+            href="#"><b>Warning! ~You are about to delete an activity</b></a>
+        </nav>
+        <div>
+            <br>
+            <br>
+            <br>
+        </div>
+        <div class="delete_activity">
+            <h3> Are you sure you want to delete {{activityToDelete.name}}? </h3>
+            <form action="{{ url_for('deleteActivity', place_id=activityToDelete.place_id, activity_id=activityToDelete.id)}}" 
+                method = 'POST'>
+                <input type='submit' 
+                    value = 'Delete'
+                    class="btn btn-light" style="position: absolute; right: 10;">
+            </form>
+	    <br>
+	    <br>
+            <a href = "{{url_for('showActivities', country_id=country_id, place_id=activityToDelete.place_id)}}"
+                class="btn btn-light" style="position: absolute; right: 10;"> Cancel </a>
+        </div>
+    </body>
+</html>

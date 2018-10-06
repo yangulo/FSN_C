@@ -1,0 +1,51 @@
+
+.body {
+    background-color: #E0E0E0;
+    padding: 13px;
+    font-size: 13px;
+}
+.body_places{
+    background-color: #E0E0E0;
+}
+.body_activities{
+    background-color: #E0E0E0;
+}
+.body_new_activity{
+    background-color: #E0E0E0;
+}
+.body_edit_activity{
+    background-color: #E0E0E0;
+}
+.body_delete_activity{
+    background-color: #E0E0E0;
+}
+.text_places{
+    font-size: 30px;
+    padding: 13px;
+    color:black;
+}
+.text_activities{
+    font-size: 30px;
+    padding: 13px;
+    color:black;
+}
+.text_place_name{
+    font-size: 15px;
+    padding: 13px;
+    color:black;
+}
+.text_activity_name{
+    font-size: 15px;
+    padding: 13px;
+    color:black;
+}
+.add_activity{
+    padding: 13px;
+}
+.edit_activity{
+    padding: 13px;
+}
+.delete_activity{
+    padding: 13px;
+}
+
